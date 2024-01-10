@@ -5,6 +5,7 @@
 //Given the fuelLevel value, should launchReady be true or false after the check?  Is the program behaving as expected?
 
 let launchReady = false;
+console.log(launchReady)
 let fuelLevel = 17000;
 // let crewStatus = true;
 // let computerStatus = 'green';
