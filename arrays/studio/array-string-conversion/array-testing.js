@@ -36,17 +36,19 @@ function reverseSpaces() {
 	let output;
   //TODO: write the code required for this step
 	if (check.includes(" ")){
-		output = check.split(" ").().join(" ")
+		output = check.split(" ").sort().reverse().join(" ")
 	}
 	return output;
 }
 
 //5)
 function commaSpace() {
-	let check;
+	let check = strings[3];
 	let output;
 	//TODO: write the code required for this step
-  
+	if (check.includes(", ")){
+		output = check.split(", ").reverse().join(",")
+	}
 	return output;
 }
 
