@@ -1,9 +1,14 @@
+const input = require('readline-sync');
+let symbol = input.question('Please enter your symbol here!: ')
+do {symbol = input.question('Please enter only 1 character: ')}
+while(symbol.length > 1);
+
 function makeLine(size){
     let line = ''
-    for (let i = 0; i <= size - 1; i++){
-        line += '#'
+    for (let i = 0; i < size; i++){
+        line += symbol
     }
-    console.log(line)
+    return line;
 }
 
 // makeLine(5)
@@ -22,7 +27,7 @@ function makeSquare(size){
     return square
 }
 
-// makeSquare(10)
+// console.log(makeSquare(10))
 
 
 function makeRectangle(width, height){
@@ -40,12 +45,41 @@ function makeRectangle(width, height){
 function makeDownwardStairs(height){
     let downwardStairs = '';
     for(let i = 0; i < height; i+= 1){
-        downwardStairs = makeLine((i+1) + "\n")
+        downwardStairs += makeLine(i+1) + "\n"
     }
     return downwardStairs
 }
-// makeDownwardStairs(5)
+// console.log(makeDownwardStairs(5))
 
 function makeSpaceLine(numSpaces, numChars){
+    let spaces = ''
+    let chars = ''
+    for (let i = 0; i < numSpaces; i++){
+        spaces += " "
+    }
+    chars = makeLine(numChars);
+    let spaceLine = spaces + chars + spaces;
+    return spaceLine
+}
+// console.log(makeSpaceLine(2, 5))
+
+function makeIsocelesTriangle(height){
+    let triangle = ''
+    for (let i = 0; i < height; i++){
+        triangle +=makeSpaceLine(height - i - 1, 2 * i + 1) + "\n"
+        
+    }
+    return triangle
+}
+// console.log(makeIsocelesTriangle(5))
+
+function makeDiamond(height){
+    let diamond = '';
+    let reversedDiamond = '';
+    diamond += makeIsocelesTriangle(height)
+    reversedDiamond = diamond.split('').reverse().join('')
+    let fullDiamond = diamond.trimEnd() + reversedDiamond;
+    return fullDiamond;
     
 }
+console.log(makeDiamond(5))
