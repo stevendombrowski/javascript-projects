@@ -1,6 +1,6 @@
 const input = require('readline-sync');
-let symbol = input.question('Please enter your symbol here!: ')
-do {symbol = input.question('Please enter only 1 character: ')}
+
+do {symbol = input.question('Please enter your  1 character symbol here!: ')}
 while(symbol.length > 1);
 
 function makeLine(size){
@@ -37,10 +37,10 @@ function makeRectangle(width, height){
     }
 
         
-    return rectangle.slice(0, -1);
+    return rectangle.trim();
 }
 
-// makeRectangle(5,6)
+console.log(makeRectangle(5,6))
 
 function makeDownwardStairs(height){
     let downwardStairs = '';
