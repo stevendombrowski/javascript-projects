@@ -4,7 +4,7 @@ function randomFromArray(arr){
   return arr[randomValue];
 }
 
-console.log(randomFromArray([45, 25, 20, 21, 12]))
+
 
 //TODO: Export the randomFromArray function.
-module.import = randomFromArray;
+module.exports = randomFromArray;
