@@ -19,3 +19,7 @@ console.log(fox);
 console.log(fox.age, fox.color);
 
 //Try modifying or adding properties below.
+
+fox.legs = 4;
+
+console.log(fox)

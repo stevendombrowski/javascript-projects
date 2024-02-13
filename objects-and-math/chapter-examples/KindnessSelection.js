@@ -6,9 +6,13 @@ function randomSelection(arr){
  let happiness = ['Hope', 'Joy', 'Peace', 'Love', 'Kindness', 'Puppies', 'Kittens', 'Tortoise'];
  
  let words = ['Hello', 'World', 'Python', 'JavaScript', 'Rutabaga'];
+
+ let arrays = [happiness, words]
  
- for (i=0; i < 8; i++){
-   console.log(randomSelection(happiness));
+ for (i=0; i < 3; i++){
+   console.log(randomSelection(happiness))
+   console.log(randomSelection(words))
+   console.log(randomSelection(arrays, 2))
  }
  
  //Experiment with the code above. Try to:
