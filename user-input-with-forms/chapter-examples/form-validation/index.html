@@ -12,7 +12,12 @@
     window.addEventListener("load", function() {
       let form = document.querySelector("form");
       form.addEventListener("submit", function(event) {
-        alert("submit clicked");
+        let usernameInput = document.querySelector("input[name=username]")
+        let teamInput = document.querySelector("input[name=team]")
+        if(teamInput.value === "" || usernameInput.value === ""){
+          alert("ALL FORMS NEED TO BE ENTERED")
+          event.preventDefault()
+        }
       });
     });
   </script>
