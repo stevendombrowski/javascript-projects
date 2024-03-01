@@ -1,0 +1,35 @@
+label{
+	float: left;
+	padding: 15px;
+	width: 50%;
+} 
+form{
+	width: 50%;
+}
+#button{
+	
+	background-color: lightgreen;
+	color: white;
+	border: 0;
+	height: 35px;
+	width: 75px;
+	border-radius: 5px;
+    
+}
+button:hover{
+    background-color: green;
+}
+
+
+#name{
+    width: 300px;
+    height: 20px;
+}
+#email{
+    width: 300px;
+    height: 20px;
+}
+#message{
+    width: 300px;
+    height: 150px;
+}
